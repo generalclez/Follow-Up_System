@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script>
+        function validatePassword() {
+            var password = document.getElementById("pword").value;
+            var confirmPassword = document.getElementById("confirmPword").value;
+            var errorContainer = document.getElementById("passwordError");
+
+            if (password !== confirmPassword) {
+                errorContainer.innerHTML = "Passwords do not match";
+                return false;
+            } else {
+                errorContainer.innerHTML = "";
+            }
+
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fliud bg-light">
+        <div class="row">
+            <div class="col-10 col-md-6 m-auto mt-1 pb-5 bg-white shadow-sm rounded rounded-3">
+                <div class="text-center pt-4">
+                    <h1 class="text-danger fw-bolder"> Registration Portal </h1>
+                    <h4 class="fw-bold">Sign up for Image and Glory Conference, 2023.</h4>
+                </div>
+                <div class="mt-5 px-5">
+                    <form action="#" onsubmit="return validatePassword();">
+                        <h6 class="text-center">Kindly fill the form below correctly</h6>
+                        <div class="form-group mt-3">
+                            <label for="fname">First Name <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="fname" placeholder="First Name " required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="lname">Last Name <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="lname" placeholder="Last Name " required>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="email">Email Address<span class="text-danger">*</span></label>
+                            <input class="form-control" type="email" name="email" placeholder="example@example.com"
+                                required>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="phone">Phone Number <span class="text-danger">*</span></label>
+                            <input class="form-control" type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="gender">Gender <span class="text-danger">*</span></label>
+                            <select class="form-control" name="gender" id="" required>
+                                <option value="">Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="pword">Password <span class="text-danger">*</span></label>
+                            <input class="form-control" type="password" name="pword" id="pword" placeholder="Password"
+                                required>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="confirmPword">Confirm Password <span class="text-danger">*</span></label>
+                            <input class="form-control" type="password" name="confirmPword" id="confirmPword"
+                                placeholder="Confirm Password" required>
+                            <div id="passwordError" class="text-danger mt-2"></div>
+                        </div>
+                        <button type="submit" class="btn w-100 btn-danger mt-4 shadow-sm">Sign Up</button>
+                    </form>
+                    <p class="text-center mt-2">Already have an account? <a href="./index.html" class="text-danger">Sign
+                            in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
