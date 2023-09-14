@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/form.css">
+
+</head>
+
+<body class="bg-light">
+    <div class="container-fliud">
+        <div class="row">
+            <div class="col-10 col-md-6 m-auto mt-1 pb-5 bg-white shadow-sm rounded rounded-3">
+                <div class="text-center">
+                    <img src="./assets/logo.png" alt="Logo" class="img-fliud w-25 mt-4">
+                    <h1 class="text-danger fw-bolder"> Registration Portal </h1>
+                    <h4 class="fw-bold">Image and Glory Conference, 2023.</h4>
+                </div>
+                <hr>
+                <div class="mt-5 px-5">
+                    <form id="redirectForm" action="#">
+                        <h5 class="bg-dark text-white p-1">Conference Entry </h5>
+                        <div class="form-group  mt-3">
+                            <span class="d-block mb-2 fw-bold">What Day are you resuming?</span>
+                            <input type="radio" id="day1" name="day" value="day1">
+                            <label for="day1"> Monday (Day 1)</label><br>
+                            <input type="radio" id="day2" name="day" value="day2">
+                            <label for="day2"> Tuesday (Day 2)</label><br>
+                            <input type="radio" id="day3" name="day" value="day3">
+                            <label for="day3"> Wednesday (Day 3)</label><br>
+                            <input type="radio" id="day4" name="day" value="day4">
+                            <label for="day4"> Thursday (Day 4)</label><br>
+                            <input type="radio" id="day5" name="day" value="day5">
+                            <label for="day5"> Friday (Day 5)</label><br>
+                            <input type="radio" id="day6" name="day" value="day6">
+                            <label for="day6"> Monday (Day 1)</label><br>
+                            <input type="radio" id="day7" name="day" value="day7">
+                            <label for="day7"> Monday (Day 7)</label><br>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <span class="d-block mb-2 fw-bold">Do you hava a dependant? <span
+                                    class="text-danger">*</span></span>
+                            <input type="radio" id="yes_dependant" name="dependant" value="dependant">
+                            <label for="yes_dependant"> Yes</label><br>
+                            <input type="radio" id="no_dependant" name="dependant" value="no_dependant">
+                            <label for="no_dependant"> No</label>
+                        </div>
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-danger shadow-sm"
+                                onclick="window.location.href = './signUp.html';">Back</button>
+                            <button type="button" class="btn btn-danger ms-2 shadow-sm"
+                                onclick="handleFormSubmission_1();">Next</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>

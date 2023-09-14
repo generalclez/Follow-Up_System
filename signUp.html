@@ -6,90 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <script>
-        function validatePassword() {
-            var password = document.getElementById("pword").value;
-            var confirmPassword = document.getElementById("confirmPword").value;
-            var errorContainer = document.getElementById("passwordError");
-
-            if (password !== confirmPassword) {
-                errorContainer.innerHTML = "Passwords do not match";
-                return false;
-            } else {
-                errorContainer.innerHTML = "";
-            }
-
-            return true;
-        }
-    </script>
+    <link rel="stylesheet" href="./assets/css/form.css">
 </head>
 
-<body>
-    <div class="container-fliud bg-light">
+<body class="bg-light">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-10 col-md-6 m-auto mt-1 pb-5 bg-white shadow-sm rounded rounded-3">
                 <div class="text-center">
-                    <img src="./assets/logo.png" alt="Logo" class="img-fliud w-25">
+                    <img src="./assets/logo.png" alt="Logo" class="img-fluid w-25 mt-4">
                     <h1 class="text-danger fw-bolder"> Registration Portal </h1>
                     <h4 class="fw-bold">Sign up for Image and Glory Conference, 2023.</h4>
+                    <h6>20th - 26th November, 2023</h6>
                 </div>
+                <hr>
                 <div class="mt-5 px-5">
-                    <form action="#" onsubmit="return validatePassword();">
+                    <form id="signupForm" action="#">
                         <h6 class="text-center">Kindly fill the form below correctly</h6>
-                        <div class="form-group mt-3">
-                            <label for="fname">First Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" name="fname" placeholder="First Name " required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for="lname">Last Name <span class="text-danger">*</span></label>
-                            <input class="form-control" type="text" name="lname" placeholder="Last Name " required>
-                        </div>
                         <div class="form-group  mt-3">
-                            <label for="email">Email Address<span class="text-danger">*</span></label>
+                            <label for="email" class="fw-bold">Email Address<span class="text-danger">*</span></label>
                             <input class="form-control" type="email" name="email" placeholder="example@example.com"
                                 required>
                         </div>
+                        <div class="form-group mt-3">
+                            <label for="fname" class="fw-bold">Surname <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="fname" placeholder="First Name " required>
+                        </div>
+                        <div class="form-group mt-3">
+                            <label for="lname" class="fw-bold">First Name <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="lname" placeholder="Last Name " required>
+                        </div>
+
                         <div class="form-group  mt-3">
-                            <label for="phone">Phone Number <span class="text-danger">*</span></label>
+                            <label for="phone" class="fw-bold">Phone Number <span class="text-danger">*</span></label>
                             <input class="form-control" type="tel" name="phone" placeholder="Phone Number" required>
                         </div>
                         <div class="form-group  mt-3">
-                            <label for="gender">Gender <span class="text-danger">*</span></label>
+                            <label for="gender" class="fw-bold">Gender <span class="text-danger">*</span></label>
                             <select class="form-control" name="gender" id="" required>
-                                <option value="">Select Gender</option>
+                                <option value="">Choose</option>
                                 <option value="male">Male</option>
                                 <option value="female">Female</option>
                             </select>
                         </div>
                         <div class="form-group  mt-3">
-                            <label for="gender">Will you be attend on online or onsite? <span
-                                    class="text-danger">*</span></label>
+                            <span class="d-block mb-2" class="fw-bold">Age Range</span>
+                            <input type="checkbox" id="below12" name="below12" value="age">
+                            <label for="below12"> Below 12</label><br>
+                            <input type="checkbox" id="secondAge" name="secondAge" value="age">
+                            <label for="secondAge"> 12 to 17</label><br>
+                            <input type="checkbox" id="thirdAge" name="thirdAge" value="age">
+                            <label for="thirdAge">18 to 24</label><br>
+
+                            <input type="checkbox" id="fourthAge" name="fourthage" value="age">
+                            <label for="fourthAge">25 to 34</label><br>
+                            <input type="checkbox" id="fifthAge" name="fifthAge" value="age">
+                            <label for="fifthAge">35 to 44</label><br>
+                            <input type="checkbox" id="sixthAge" name="sixthAge" value="age">
+                            <label for="sixthAge">45 and above</label>
+                        </div>
+                        <div class="form-group  mt-3">
+                            <label for="gender" class="fw-bold">Occupation <span class="text-danger">*</span></label>
                             <select class="form-control" name="attend" id="" required>
-                                <option value="">......</option>
-                                <option value="male">Onsite</option>
-                                <option value="female">Online</option>
+                                <option value="">Choose</option>
+                                <option value="male">Student</option>
+                                <option value="female">Worker</option>
                             </select>
                         </div>
                         <div class="form-group  mt-3">
-                            <label for="pword">Password <span class="text-danger">*</span></label>
-                            <input class="form-control" type="password" name="pword" id="pword" placeholder="Password"
+                            <label for="city" class="fw-bold">City <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="city" id="city" placeholder="Your answer"
                                 required>
                         </div>
                         <div class="form-group  mt-3">
-                            <label for="confirmPword">Confirm Password <span class="text-danger">*</span></label>
-                            <input class="form-control" type="password" name="confirmPword" id="confirmPword"
-                                placeholder="Confirm Password" required>
-                            <div id="passwordError" class="text-danger mt-2"></div>
+                            <label for="country" class="fw-bold">Country <span class="text-danger">*</span></label>
+                            <input class="form-control" type="text" name="country" id="country"
+                                placeholder="Your answer" required>
                         </div>
-                        <button type="submit" class="btn w-100 btn-danger mt-4 shadow-sm">Sign Up</button>
+                        <div class="mt-4">
+                            <button type="button" class="btn btn-danger shadow-sm"
+                                onclick="validateAndSubmit();">Next</button>
+                        </div>
                     </form>
-                    <p class="text-center mt-2">Already have an account? <a href="./index.html" class="text-danger">Sign
-                            in</a>
-                    </p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="./assets/index.js"></script>
 </body>
 
 </html>
